@@ -1,0 +1,25 @@
+{% extends "template.html" %}
+{% block conteudo %}
+<body>
+<table class="table table-responsive">
+<thead>
+    <tr>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Email</th>
+    </tr>
+</thead>
+<tbody>
+{% for cliente in listaCliente %}
+                <tr>
+                    <td>{{ cliente.nome }}</td>
+                    <td>{{ cliente.email }}</td>
+                    <td>{{ cliente.telefone }}</td>
+                </tr>
+{% endfor %}
+</tbody>
+
+</table>
+<a href='/'>Voltar</a>
+</body>
+{% endblock %}
